@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular);
+
+:root {
+  --gap: 2em;
+  --violet: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+header > img {
+  height: 5vh;
+}
+
+.image-container > img {
+  max-width: 100%;
+  max-height: 40vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--violet);
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+header {
+  display: fixed;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+}
+
+footer {
+  display: fixed;
+  position: absolute;
+  bottom: 2em;
+}
+
+nav > ul {
+  display: flex;
+  gap: 1em;
+}
+
+li {
+  border: solid 1px white;
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+main {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.text-container > h1 {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.text-container > p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.text-container > button {
+  border: none;
+  font-family: "Poppins";
+  color: var(--violet);
+  background-color: white;
+  border-radius: 2em 2em;
+  width: fit-content;
+  padding: 1em 5em;
+  font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+  main {
+    flex-direction: row;
+    padding: 5%;
+  }
+  .image-container > img {
+    max-width: unset;
+    max-height: unset;
+  }
+
+  .text-container {
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+  }
+  .text-container > h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+  .text-container > p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  footer {
+    left: auto;
+    right: 5%;
+  }
+}
+
+.text-container > button:hover {
+  color: white;
+  background-color: var(--magenta);
+  cursor: pointer;
+}
+
+li:hover {
+  color: var(--magenta);
+  border-color: var(--magenta);
+  cursor: pointer;
+}

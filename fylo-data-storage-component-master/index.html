@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-top">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <div class="header-bot">
+          <div class="icon-container">
+            <img src="./images/icon-document.svg" alt="Document icon" />
+          </div>
+          <div class="icon-container">
+            <img src="./images/icon-folder.svg" alt="Folder icon" />
+          </div>
+          <div class="icon-container">
+            <img src="./images/icon-upload.svg" alt="Upload" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="label">
+          You’ve used <span class="bold">815 GB</span> of your storage
+        </div>
+        <div class="loading-bar">
+          <div class="background-bar">
+            <div class="loaded-bar">
+              <div class="cursor"></div>
+            </div>
+          </div>
+          <div class="loading-label">
+            <span class="bold">0 GB</span>
+            <span class="bold">1000 GB</span>
+          </div>
+        </div>
+        <div class="tooltip">
+          <div class="tooltip-text">
+            <span class="bold big">185</span>
+            <span class="gray">GB LEFT</span>
+          </div>
+          <div id="triangle-code" class="tooltip-queue">
+            
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:regular,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-light: hsl(179, 62%, 53%);
+  --yellow: hsl(71, 73%, 54%);
+  --gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+h2 {
+  font-size: 1rem;
+}
+
+html {
+  font-family: "Karla";
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray);
+}
+
+.card {
+  border-radius: 0.5em;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.top {
+  padding: 2rem;
+  background-color: white;
+}
+
+.top > h1 {
+  font-weight: 700;
+  padding-bottom: 1em;
+  color: var(--cyan);
+}
+.top > h2 {
+  font-weight: 700;
+  padding-bottom: 1em;
+  color: var(--yellow);
+}
+
+.top > p {
+  color: var(--grayish-blue);
+  line-height: 1.5;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+span.price {
+  font-size: 2rem;
+}
+
+@media (min-width: 40em) {
+  .bottom {
+    flex-direction: row;
+  }
+  div.price,
+  .why-us {
+    flex-grow: 1;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  span.price {
+    font-size: 2.5rem;
+  }
+}
+
+div.price {
+  padding: 2rem;
+  background-color: var(--cyan);
+  color: white;
+}
+
+div.price > h1 {
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+
+.price-box {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  /* justify-content: flex-start; */
+  margin-bottom: 0.75em;
+}
+
+span.period {
+  color: var(--gray);
+}
+
+.price-box + p {
+  padding-bottom: 1.5em;
+}
+
+.price > button {
+  width: 100%;
+  border: none;
+  background-color: var(--yellow);
+  border: none;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.why-us {
+  padding: 2rem;
+  background-color: var(--cyan-light);
+  color: white;
+}
+
+.why-us > h1 {
+  font-weight: 700;
+  padding-bottom: 0.75em;
+}
+
+ul > li {
+  list-style: none;
+  color: var(--gray);
+  line-height: 1.4;
+}

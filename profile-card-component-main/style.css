@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:regular,700);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+  min-height: 100vh;
+  background: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-color: var(--dark-cyan);
+  background-repeat: no-repeat;
+  background-position: 120% 200%, -20% -100%;
+  background-blend-mode: soft-light;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kumbh Sans";
+}
+
+.card {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  max-width: 400px;
+  /* display: none; */
+  flex-direction: column;
+  margin-inline: 2em;
+  background-color: white;
+  border-radius: 1em;
+}
+
+.card-top {
+  flex-grow: 1;
+  min-height: 20vh;
+  border-radius: 1em 1em 0 0;
+  background-color: cyan;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-avatar {
+  margin-top: -48px;
+  border-radius: 100%;
+  margin-inline: auto;
+  background-color: red;
+  background-image: url("./images/image-victor.jpg");
+  outline: 5px solid white;
+  width: 96px;
+  height: 96px;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-user {
+  text-align: center;
+  margin-top: 1em;
+}
+
+span.name {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+span.age {
+  color: var(--dark-gray);
+  font-size: 1.125rem;
+  margin-inline: 0.5em;
+}
+
+p.city {
+  margin-top: 0.5em;
+  font-size: 0.875rem;
+  color: var(--dark-gray);
+}
+
+.card-separator {
+  width: 100%;
+  height: 0.5px;
+  background-color: hsla(0, 0%, 59%, 50%);
+  margin-block: 1em;
+}
+
+.card-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  padding-inline: 2em;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.main {
+  font-weight: 900;
+  letter-spacing: 0.1ch;
+}
+
+p.sub {
+  color: var(--grayish-blue);
+  font-size: 0.625em;
+  letter-spacing: 0.2ch;
+  margin-top: 0.25em;
+}
