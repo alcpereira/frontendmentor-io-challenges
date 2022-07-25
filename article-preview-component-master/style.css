@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-main: hsl(217, 19%, 35%);
+    --clr-p: hsl(214, 17%, 51%);
+    --clr-share: hsl(212, 23%, 69%);
+    --clr-bg: hsl(210, 46%, 95%);
+
+    --fs-500: 13px;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--clr-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Manrope, sans-serif;
+    font-size: var(--fs-500);
+    line-height: 1.5;
+    color: var(--clr-main)
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    background-color: white;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.card-text {
+    padding: 2.75em;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--clr-p);
+}
+
+
+.card-footer-passive {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    padding: 0 2.75em;
+    padding-bottom: 1.5em;
+}
+
+.card-footer-avatar {
+    width: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    justify-self: flex-start;
+}
+
+.card-footer-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-footer-text-name {
+    font-weight: var(--fw-bold);
+}
+
+
+.card-footer-share-btn {
+    width: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-bg);
+    border-radius: 100%;
+}
+
+
+.card-footer-active {
+    background-color: var(--clr-main);
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    padding: 1.5em 2.75em;
+    padding-bottom: 1.5em;
+}
+
+.card-footer-active>p {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: flex;
+}
+
+.card-footer-icons {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.card-footer-icons>ul {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.card-footer-active>.card-footer-share-btn {
+    background-color: var(--clr-p);
+}
+
+
+@media (min-width: 600px) {
+    .card {
+        flex-direction: row;
+        max-width: 875px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+}
